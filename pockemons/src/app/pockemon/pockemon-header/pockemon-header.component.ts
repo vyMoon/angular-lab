@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component, OnInit, Input, Output, EventEmitter
+} from '@angular/core';
 
 @Component({
   selector: 'app-pockemon-header',
@@ -6,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pockemon-header.component.scss']
 })
 export class PockemonHeaderComponent implements OnInit {
+
+  @Input() title: string;
+  @Input() style: string;
+
+  @Output() styleChange = new EventEmitter();
 
   constructor() { }
 

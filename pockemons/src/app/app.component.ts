@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Pockemons';
+  style = 'cards';
+
+  onStyleChange() {
+    this.style = this.style === 'cards' ? 'lines' : 'cards';
+  }
+
 }

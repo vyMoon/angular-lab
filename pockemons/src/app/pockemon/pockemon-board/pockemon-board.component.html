@@ -1,2 +1,11 @@
-<p>pockemon-board works!</p>
-<app-pockemon-item></app-pockemon-item>
+<div class="wrapper board_wrapper"
+    [ngClass]="{'board_wrapper-lines': style === 'lines'}"
+>
+    <app-pockemon-item
+        *ngFor="let pockemon of pockemons"
+        [pockemon]="pockemon"
+        [style]="style"
+        (action)="onAction($event)"
+    ></app-pockemon-item>
+</div>
+
