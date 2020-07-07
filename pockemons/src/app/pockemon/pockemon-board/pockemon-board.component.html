@@ -1,11 +1,15 @@
 <div class="wrapper board_wrapper"
     [ngClass]="{'board_wrapper-lines': style === 'lines'}"
+    @myInsertRemoveTrigger
 >
     <app-pockemon-item
+        
         *ngFor="let pockemon of pockemons"
         [pockemon]="pockemon"
         [style]="style"
         (action)="onAction($event)"
     ></app-pockemon-item>
 </div>
+
+<!-- @myInsertRemoveTrigger -->
 

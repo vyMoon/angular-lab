@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { PockemonModule } from './pockemon/pockemon.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { PockemonModule } from './pockemon/pockemon.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     PockemonModule
   ],
   providers: [],

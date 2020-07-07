@@ -2,13 +2,54 @@ import {
   Component, OnInit, Input
 } from '@angular/core';
 
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+  keyframes,
+  query,
+  stagger
+} from '@angular/animations';
+
 import { Pockemon } from '../../Interfases';
 import { letters } from '../../../names';
 
 @Component({
   selector: 'app-pockemon-board',
   templateUrl: './pockemon-board.component.html',
-  styleUrls: ['./pockemon-board.component.scss']
+  styleUrls: ['./pockemon-board.component.scss'],
+
+  animations: [
+
+
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        query('.pockemon_card, form', [
+          style({opacity: 0, transform: 'translateY(-100px)'}),
+          stagger(30, [
+            animate('500ms', style({ opacity: 1, transform: 'none' }))
+          ])
+        ])
+      ])
+    ]),
+
+
+
+  // trigger('myInsertRemoveTrigger', [
+  //     transition(':enter', [
+  //       style({ opacity: 0 }),
+  //       animate('1000ms ease-out', style({ opacity: 1 })),
+  //     ]),
+  //     transition(':leave', [
+  //       animate('1000ms ease-out', style({ opacity: 0 }))
+  //     ])
+  //   ]),
+
+
+
+  ]
 })
 export class PockemonBoardComponent implements OnInit {
 

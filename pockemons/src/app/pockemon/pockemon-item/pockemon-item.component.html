@@ -1,4 +1,9 @@
-<div class="pockemon_card"
+<div 
+    
+    
+    
+    
+    class="pockemon_card"
     [ngClass]="{
         'pockemon_card-powerfull': isPowerfull(),
         'pockemon_card-cards': style == 'cards',
@@ -24,7 +29,9 @@
     </div>
     
 
-    <div class="pockemon_container"
+    <div 
+       
+        class="pockemon_container"
         [ngClass]="{'pockemon_container-lines': style === 'lines'}"
         (click)="onClickButton()"
     >
@@ -32,3 +39,19 @@
     </div>
 
 </div>
+
+<!-- [@pockemonChecker]="pockemon.isFree ? 'free' : 'caught'" -->
+
+<!-- (@pockemonChecker.start)="onAnimationEvent($event)"
+    (@pockemonChecker.done)="onAnimationEvent($event)" -->
+
+<!-- [@conditions]="pockemon.isFree ? 'first' : 'second'" -->
+
+<!-- [@.disabled]="true" -->
+
+<!-- <div @flyInOut *ngIf="pockemon.isFree" -->
+
+
+<!-- <div @myInsertRemoveTrigger *ngIf="pockemon.isFree" -->
+
+
