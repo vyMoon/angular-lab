@@ -1,25 +1,27 @@
 import {
-  Component, OnInit, Input, Output, EventEmitter
+  Component, OnChanges, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef
 } from '@angular/core';
 
-import { Pockemon, PockemonAction } from '../../Interfases';
+import { Pockemon } from '../../Interfases';
 
 @Component({
   selector: 'app-pockemon-item',
   templateUrl: './pockemon-item.component.html',
-  styleUrls: ['./pockemon-item.component.scss']
+  styleUrls: ['./pockemon-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PockemonItemComponent implements OnInit {
+export class PockemonItemComponent implements OnChanges {
 
   @Input() pockemon: Pockemon;
+  @Input() language: string;
   @Input() style: string;
 
   @Output() action: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(public cd: ChangeDetectorRef) {}
 
-  ngOnInit(): void {
-    // console.log(this.pockemon)
+  ngOnChanges(): void {
+    this.cd.detectChanges();
   }
 
   onClickButton(): void {

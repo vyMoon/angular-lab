@@ -1,8 +1,8 @@
 <div class="pockemon_card"
     [ngClass]="{
         'pockemon_card-powerfull': isPowerfull(),
-        'pockemon_card-cards': style == 'cards',
-        'pockemon_card-lines': style == 'lines'
+        'pockemon_card-cards': style === 'cards',
+        'pockemon_card-lines': style === 'lines'
     }" 
 >
     <div class="pockemon_information" 
@@ -11,13 +11,13 @@
         <h3 class="pockemon_name" 
             [ngClass]="{'pockemon_name-lines': style === 'lines'}"
         >
-            {{ pockemon.name | uppercase }}
+            {{ pockemon.name[language] | uppercase }}
         </h3>
 
         <img class="pockemon_image" 
             [ngClass]="{'pockemon_image-lines': style === 'lines'}"
             [src]="'../../../assets/pokemons/'+ pockemon.id +'.png'" 
-            alt="{{ pockemon.name }}"
+            alt="{{ pockemon.name.eng }}"
         >
 
         <p class="pockemon_damage">~ {{ pockemon.damage }} ~</p>

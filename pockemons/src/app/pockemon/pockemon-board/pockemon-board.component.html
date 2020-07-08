@@ -4,6 +4,7 @@
     <app-pockemon-item
         *ngFor="let pockemon of pockemons"
         [pockemon]="pockemon"
+        [language]="language"
         [style]="style"
         (action)="onAction($event)"
     ></app-pockemon-item>

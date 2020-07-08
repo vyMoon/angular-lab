@@ -1,9 +1,12 @@
 import {
-  Component, OnInit, Input
+  Component, OnInit,
 } from '@angular/core';
 
+import { PockemonService } from '../services/pockemon/pockemon.service';
+
 import { Pockemon } from '../../Interfases';
-import { letters } from '../../../names';
+import { ViewService } from '../services/view/view.service';
+import { LanguageService } from '../services/language/language.service';
 
 @Component({
   selector: 'app-pockemon-board',
@@ -11,62 +14,36 @@ import { letters } from '../../../names';
   styleUrls: ['./pockemon-board.component.scss']
 })
 export class PockemonBoardComponent implements OnInit {
-
-  @Input() style: string;
-
   pockemons: Pockemon[] = [];
-  private pockemonsCount: number = 16;
 
-  constructor() { }
+  constructor(
+    private pockemonService: PockemonService,
+    private viewService: ViewService,
+    private languageService: LanguageService,
+  ) { }
 
   ngOnInit(): void {
-    this.pockemons = this.createPockemons(this.getPockemonsIds(this.pockemonsCount))
+    this.getPockemons();
+  }
+
+  get style(): string {
+    return this.viewService.style;
+  }
+
+  get language(): string {
+    return this.languageService.language;
   }
 
   onAction(pockemonId: number): void {
     const pockemonIndex: number = this.pockemons.findIndex( el => el.id === pockemonId );
     this.pockemons[pockemonIndex].isFree = !this.pockemons[pockemonIndex].isFree;
+    const language = this.languageService.language;
     const action: string = this.pockemons[pockemonIndex].isFree ? 'released' : 'cought';
-    console.log(`Pockemon ${this.pockemons[pockemonIndex].name} was ${action}`);
-  };
+    console.log(`Pockemon ${this.pockemons[pockemonIndex].name[language]} was ${action}`);
+  }
 
-  private getName(): string {
-    let name = '';
-    const length: number = this.getPockemonData(2, 5);
-    for (let i = 0; i < length; i++) {
-      name += letters[this.getPockemonData(0, 101)];
-    }
-    return name;
-  };
-
-  private getPockemonsIds(count: number): number[] {
-    const pockemonsIds: number[] = [];
-    for(;pockemonsIds.length < count;) {
-      const id: number = this.getPockemonData(1, 720);
-      if (!(id in pockemonsIds)) {
-        pockemonsIds.push(id);
-      }
-    }
-    return pockemonsIds;
-  };
-
-  private createPockemons(pockemonsIds: number[]): Pockemon[] {
-    return pockemonsIds.map( id => {
-      return this.createPockemon(id);
-    })
-  };
-
-  private createPockemon(id: number): Pockemon {
-    return {
-      name: this.getName(),
-      id: id,
-      damage: this.getPockemonData(25, 75),
-      isFree: true,
-    }
-  };
-
-  private getPockemonData(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min)) + min;
-  };
+  private getPockemons(): void {
+    this.pockemonService.getAll().subscribe( pockemons => this.pockemons = pockemons);
+  }
 
 }
