@@ -1,0 +1,10 @@
+.board_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 60px;
+
+    &-lines {
+        flex-direction: column;
+    }
+}

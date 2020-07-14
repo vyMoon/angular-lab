@@ -1,0 +1,12 @@
+<div class="wrapper board_wrapper"
+    [ngClass]="{'board_wrapper-lines': style === 'lines'}"
+>
+    <app-pockemon-item
+        *ngFor="let pockemon of pockemons"
+        [pockemon]="pockemon"
+        [language]="language"
+        [style]="style"
+        (action)="onAction($event)"
+    ></app-pockemon-item>
+</div>
+
