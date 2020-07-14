@@ -11,7 +11,7 @@
         <h3 class="pockemon_name" 
             [ngClass]="{'pockemon_name-lines': style === 'lines'}"
         >
-            {{ pockemon.name[language] | uppercase }}
+            <a [routerLink]="'/pockemon/' + pockemon.id">{{pockemon.name[language]}}</a>
         </h3>
 
         <img class="pockemon_image" 

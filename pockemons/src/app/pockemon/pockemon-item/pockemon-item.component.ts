@@ -24,6 +24,10 @@ export class PockemonItemComponent implements OnChanges {
     this.cd.detectChanges();
   }
 
+  onDiv() {
+    console.log('div')
+  }
+
   onClickButton(): void {
     this.action.emit(this.pockemon.id);
   }

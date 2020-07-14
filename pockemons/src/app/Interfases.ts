@@ -3,6 +3,7 @@ export class Pockemon {
     name: Name;
     damage: number;
     isFree: boolean;
+    created: string;
 }
 
 // export class Pockemon {

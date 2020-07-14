@@ -1,4 +1,8 @@
 <app-header
     [title]="title"
 ></app-header>
-<app-pockemon-board></app-pockemon-board>
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
+<!-- <router-outlet></router-outlet> -->

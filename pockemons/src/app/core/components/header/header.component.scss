@@ -6,6 +6,7 @@
     width: 100wv;
     padding-top: 4px;
     padding-bottom: 6px;
+    z-index: 10;
 }
 
 .header-main {
@@ -95,13 +96,13 @@
     
 }
 
-.search_input {
-    padding: 5px;
+// .search_input {
+//     padding: 5px;
     
-}
+// }
 
-.search_button {
-    padding: 5px;
-    margin-left: 5px;
-    background-color: rgb(250, 227, 98);
-}
+// .search_button {
+//     padding: 5px;
+//     margin-left: 5px;
+//     background-color: rgb(250, 227, 98);
+// }
