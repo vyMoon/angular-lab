@@ -1,0 +1,34 @@
+<div class="pockemon_card"
+    [ngClass]="{
+        'pockemon_card-powerfull': isPowerfull(),
+        'pockemon_card-cards': style === 'cards',
+        'pockemon_card-lines': style === 'lines'
+    }" 
+>
+    <div class="pockemon_information" 
+        [ngClass]="{'pockemon_information-lines': style === 'lines'}"
+    >
+        <h3 class="pockemon_name" 
+            [ngClass]="{'pockemon_name-lines': style === 'lines'}"
+        >
+            <a [routerLink]="'/pockemon/' + pockemon.id">{{pockemon.name[language]}}</a>
+        </h3>
+
+        <img class="pockemon_image" 
+            [ngClass]="{'pockemon_image-lines': style === 'lines'}"
+            [src]="'../../../assets/pokemons/'+ pockemon.id +'.png'" 
+            alt="{{ pockemon.name.eng }}"
+        >
+
+        <p class="pockemon_damage">~ {{ pockemon.damage }} ~</p>
+    </div>
+    
+
+    <div class="pockemon_container"
+        [ngClass]="{'pockemon_container-lines': style === 'lines'}"
+        (click)="onClickButton()"
+    >
+        <button class="pockemon_button pockemon_button-main" >{{ pockemon.isFree ? 'catch' : 'release'}}</button>
+    </div>
+
+</div>

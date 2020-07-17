@@ -1,0 +1,30 @@
+.wrapper_not-found {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../../../assets/img/404.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+}
+
+.not-found_container {
+    position: absolute;
+    top: 30vh;
+    left: 15vw;
+}
+
+a , h4 {
+    color: white
+}
+.not-found_header {
+    font-size: 35px;
+}
+
+.not-found_link {
+    font-size: 25px;
+    color: rgb(228, 205, 0)
+}
