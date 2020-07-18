@@ -1,87 +1,87 @@
-.pockemon_card {
-    display: flex;
-    align-items: center;
-    border: 2px solid rgb(252, 243, 224);
-    border-radius: 4px;
-    background-color: rgb(252, 243, 224);
-    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.301);
-
-    &-powerfull {
-        border-color: rgb(255, 148, 26);
-    }
-
-    &-cards {
-        flex-direction: column;
-        width: 200px;
-        margin: 15px;
-        padding: 8px;
-        height: 300px;
-    }
-
-    &-lines {
-        width: 50%;
-        margin-bottom: 15px;
-        justify-content: space-between;
-        height: 50px;
-    }
-}
-
-.pockemon_information {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &-lines {
+.pockemon {
+    &_card {
         display: flex;
-        flex-direction: row;
         align-items: center;
+        border: 2px solid rgb(252, 243, 224);
+        border-radius: 4px;
+        background-color: rgb(252, 243, 224);
+        box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.301);
+    
+        &-powerfull {
+            border-color: rgb(255, 148, 26);
+        }
+    
+        &-cards {
+            flex-direction: column;
+            width: 200px;
+            margin: 15px;
+            padding: 8px;
+            height: 300px;
+        }
+    
+        &-lines {
+            width: 50%;
+            margin-bottom: 15px;
+            justify-content: space-between;
+            height: 50px;
+        }
     }
-}
 
-
-.pockemon_image {
-    width: 100%;
-    &-lines {
-        order: -1;
-        width: 30px;
-        // height: 50px;
-        margin-right: 8px;
-        margin-left: 8px;
+    &_information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        &-lines {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
     }
-}
 
-.pockemon_container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-
-    &-lines{
-        flex-basis: 150px;
+    &_image {
+        width: 100%;
+        &-lines {
+            order: -1;
+            width: 30px;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
     }
-}
 
-.pockemon_name {
-    font-weight: 600;
-
-    &-lines {
-        margin-right: 15px;
+    &_container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    
+        &-lines{
+            flex-basis: 150px;
+        }
     }
-}
 
-.pockemon_damage {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 50px;
-}
+    &_name {
+        font-weight: 600;
+    
+        &-lines {
+            margin-right: 15px;
+        }
+    }
 
-.pockemon_button {
-    padding: 4px;
-    width: 46%;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    &_damage {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 50px;
+    }
 
-.pockemon_button-main {
-    background-color: rgb(216, 211, 135);
-    cursor: pointer;
+    &_button {
+        padding: 4px;
+        width: 46%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &_button-main {
+        background-color: rgb(216, 211, 135);
+        cursor: pointer;
+    }
 }

@@ -1,0 +1,7 @@
+<div 
+    class="message message-error"
+    [ngClass]="hasMessageErorr()"
+    *ngIf="messages[0]"
+>
+    <p>{{messages[0].message}}</p>
+</div>

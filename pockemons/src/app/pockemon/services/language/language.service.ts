@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LanguageService {
 
-  language: string = 'jp';
+  language = 'jp';
 
   changeLanguage(): void {
     this.language = this.language === 'eng' ? 'jp' : 'eng';

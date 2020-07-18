@@ -1,8 +1,11 @@
 import {
-  Component, OnChanges, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef
+  Component, OnInit, OnDestroy, DoCheck, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef
 } from '@angular/core';
 
+import { Subscription } from 'rxjs';
+
 import { Pockemon } from '../../Interfases';
+import { ViewService } from '../services/view/view.service';
 
 @Component({
   selector: 'app-pockemon-item',
@@ -10,22 +13,29 @@ import { Pockemon } from '../../Interfases';
   styleUrls: ['./pockemon-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PockemonItemComponent implements OnChanges {
-
+export class PockemonItemComponent implements OnInit, DoCheck, OnDestroy {
   @Input() pockemon: Pockemon;
-  @Input() language: string;
-  @Input() style: string;
-
   @Output() action: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(public cd: ChangeDetectorRef) {}
+  style$: Subscription;
+  style2 = '';
 
-  ngOnChanges(): void {
-    this.cd.detectChanges();
+  constructor(
+    private viewService: ViewService,
+    private changeDetection: ChangeDetectorRef,
+  ) {  }
+
+  ngOnInit(): void {
+    this.style$ = this.viewService.getStyleObservable().subscribe( style => this.style2 = style);
+    this.viewService.sendStyle();
   }
 
-  onDiv() {
-    console.log('div')
+  ngDoCheck() {
+    this.changeDetection.markForCheck();
+  }
+
+  ngOnDestroy(): void {
+    this.style$.unsubscribe();
   }
 
   onClickButton(): void {

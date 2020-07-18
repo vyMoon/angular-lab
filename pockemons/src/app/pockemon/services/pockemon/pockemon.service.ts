@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 
 import { pockemons as data } from '../../../../names';
 import { Pockemon } from '../../../Interfases';
@@ -11,10 +10,6 @@ export class PockemonService {
 
   private pockemons: Pockemon[] = data;
 
-  // getAll(): Observable<Pockemon[]> {
-  //   return of(this.pockemons);
-  // }
-
   getAll(): Pockemon[] {
     return this.pockemons;
   }
@@ -25,27 +20,31 @@ export class PockemonService {
   }
 
   getBySubString(name: string): Pockemon[] {
-    // return this.pockemons.filter( pockemon => pockemon.name.eng.indexOf(name) > -1)
     return this.pockemons.filter( (pockemon) => {
-      return pockemon.name.eng.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1;
-      console.log(pockemon.name.eng.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()))
-    } )
+      return pockemon.name.toLowerCase().indexOf(name.toLowerCase()) > -1;
+    });
+  }
+
+  updatePockemon(pockemon: Pockemon): void {
+    const pockemonIndex = this.getPockemonIndex(pockemon.id);
+    const { name, damage, created} = this.pockemons[pockemonIndex];
+    if (pockemon.name !== name || pockemon.damage !== damage || pockemon.created !== created ) {
+      this.pockemons.splice(pockemonIndex, 1, pockemon);
+    }
   }
 
   filter(): Pockemon[] {
-    return [...this.pockemons].sort((a, b) => a.name.eng.localeCompare(b.name.eng));
+    return [...this.pockemons].sort((a, b) => a.name.localeCompare(b.name));
   }
 
   pockemonAction(id: number) {
     const pockemonIndex: number = this.getPockemonIndex(id);
     this.pockemons[pockemonIndex].isFree = !this.pockemons[pockemonIndex].isFree;
     const action: string = this.pockemons[pockemonIndex].isFree ? 'released' : 'cought';
-    console.log(`Pockemon ${this.pockemons[pockemonIndex].name.eng} was ${action}`);
-    // console.log(pockemonIndex)
+    console.log(`Pockemon ${this.pockemons[pockemonIndex].name} was ${action}`);
   }
 
   private getPockemonIndex(id: number): number {
-    return this.pockemons.findIndex( el => el.id === id)
+    return this.pockemons.findIndex( el => el.id === id);
   }
-
 }

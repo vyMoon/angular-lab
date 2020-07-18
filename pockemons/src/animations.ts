@@ -58,4 +58,3 @@ export const slideInAnimation = trigger('routeAnimations', [
     query(':enter', animateChild()),
   ])
 ]);
-  

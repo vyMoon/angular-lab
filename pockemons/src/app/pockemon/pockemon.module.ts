@@ -7,6 +7,7 @@ import { PockemonBoardComponent } from './pockemon-board/pockemon-board.componen
 import { PockemonItemComponent } from './pockemon-item/pockemon-item.component';
 import { PockemonDetailsComponent } from './pockemon-details/pockemon-details.component';
 import { SearchComponent } from './search/search.component';
+import { PockemonEditorComponent } from './pockemon-editor/pockemon-editor.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SearchComponent } from './search/search.component';
     PockemonItemComponent,
     PockemonDetailsComponent,
     SearchComponent,
+    PockemonEditorComponent,
   ],
   imports: [
     CommonModule,

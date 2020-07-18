@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 import { PockemonService } from '../services/pockemon/pockemon.service';
-// import { pockemons } from 'src/names';
 import { Pockemon } from 'src/app/Interfases';
 
 @Component({
@@ -19,30 +17,29 @@ export class PockemonDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private location: Location,
     private pockemonService: PockemonService
   ) { }
 
   ngOnInit(): void {
     this.getPockemon();
-    // console.log(this.pockemonInformation)
   }
 
-  getPockemon() {
-    const pockemonId = +this.route.snapshot.paramMap.get('id');
+  getPockemon(): void {
+    const pockemonId: number = +this.route.snapshot.paramMap.get('id');
     const details: Pockemon = this.pockemonService.getById(pockemonId);
     if (details) {
-      // console.log(details)
-      this.pockemonInformation = details
+      this.pockemonInformation = details;
     } else {
-      // console.log(details)
-      // this.location.back();
-      this.router.navigate(['/404'])
+      this.router.navigate(['/404']);
     }
   }
 
-  onClickCatcn(){
-    this.pockemonService.pockemonAction(this.pockemonInformation.id)
+  onClickCatcn(): void {
+    this.pockemonService.pockemonAction(this.pockemonInformation.id);
+  }
+
+  onClickEdit(): void {
+    this.router.navigate([`/edit/${this.pockemonInformation.id}`]);
   }
 
   isPowerfull(): boolean {

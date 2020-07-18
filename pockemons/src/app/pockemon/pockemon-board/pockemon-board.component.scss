@@ -1,13 +1,5 @@
 .board_wrapper {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // margin-top: 60px;
     padding-top: 60px;
-
-    // &-lines {
-    //     flex-direction: column;
-    // }
 }
 
 .pockemon-board-container {
@@ -24,14 +16,16 @@
     padding-top: 5px;
 }
 
-.search_input {
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 2px;
-}
+.search {
+    &_input {
+        padding: 5px;
+        border: 1px solid gray;
+        border-radius: 2px;
+    }
 
-.search_button {
-    padding: 5px;
-    margin-left: 5px;
-    background-color: rgb(250, 227, 98);
+    &_button {
+        padding: 5px;
+        margin-left: 5px;
+        background-color: rgb(250, 227, 98);
+    }
 }

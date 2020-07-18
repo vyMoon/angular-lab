@@ -1,0 +1,61 @@
+<div class="wrapper edit_wrapper">
+    <form class="edit_form"
+        [formGroup]="pockemonProfile" 
+        (ngSubmit)="onClickSubmit()"
+    >
+        <h4 class="form_header">Main Information</h4>
+        <label class="form_label" for="">
+            name
+            <input class="form_input" 
+                type="text" 
+                placeholder="name"
+                formControlName="name"
+                required
+                minlength="3"
+            >
+        </label>
+        <label class="form_label" for="">
+            damage
+            <input class="form_input" 
+                type="text" 
+                placeholder="dmage"
+                formControlName="damage"
+            >
+        </label>
+        <div formGroupName="createdAt">
+            <h4 class="form_header">Creation date</h4>
+            <label class="form_label" for="">
+                year
+                    <input class="form_input" 
+                    type="text" 
+                    placeholder="year"
+                    formControlName="year"
+                >
+            </label>
+            <label class="form_label" for="">
+                month
+                <input class="form_input" 
+                    type="text" 
+                    placeholder="month"
+                    formControlName="month"
+                >
+            </label>
+            <label class="form_label" for="">
+                date
+                <input class="form_input" 
+                    type="text" 
+                    placeholder="date"
+                    formControlName="date"
+                >
+            </label>
+        </div>
+        <input class="form_submit"
+            type="submit"
+            value="Submit"
+        >
+    </form>
+    <button class="edit_cancel"
+            (click)="onClickCancel()"
+        >Cancel
+    </button>
+</div>

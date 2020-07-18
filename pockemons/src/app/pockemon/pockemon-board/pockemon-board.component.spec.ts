@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PockemonBoardComponent } from './pockemon-board.component';
 
-describe('PockemonBoardComponent', () => {
+xdescribe('PockemonBoardComponent', () => {
   let component: PockemonBoardComponent;
   let fixture: ComponentFixture<PockemonBoardComponent>;
 

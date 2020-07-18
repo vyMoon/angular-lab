@@ -1,0 +1,60 @@
+.createdAt {
+    display: flex;
+    flex-direction: column;
+}
+
+%buttons {
+    font-size: 18px;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.edit {
+    &_wrapper {
+        padding-top: 60px;
+        max-width: 320px;
+        margin: auto;
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_cancel {
+        @extend %buttons;
+        background-color: rgb(233, 172, 81);
+        width: 100%;
+    }
+}
+
+
+.form {
+
+    &_header {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    &_input {
+        margin-bottom: 15px;
+        border-bottom: 2px solid rgb(0, 162, 255);
+        border-right-color: 3px;
+        padding: 5px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &_label {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_submit {
+        @extend %buttons;
+        margin-bottom: 15px;
+        background-color: rgb(204, 233, 159);
+    }
+}
