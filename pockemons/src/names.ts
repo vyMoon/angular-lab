@@ -1,5 +1,105 @@
 import { Pockemon } from './app/Interfases';
 
+export const  pockemons: Pockemon[] = [
+  {
+    id: 452,
+    name: 'MYUPO',
+    damage: 39,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 95,
+    name: 'WOMO',
+    damage: 52,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 450,
+    name: 'PYARE',
+    damage: 74,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 360,
+    name: 'GYOGI',
+    damage: 32,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 22,
+    name: 'AYA',
+    damage: 53,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 315,
+    name: 'KENAJO',
+    damage: 36,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 79,
+    name: 'NYAPYUYU',
+    damage: 41,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 52,
+    name: 'NIGIYA',
+    damage: 50,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 253,
+    name: 'TOGEBE',
+    damage: 49,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 68,
+    name: 'GONYONI',
+    damage: 55,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 520,
+    name: 'UJA',
+    damage: 66,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 131,
+    name: 'SETSU',
+    damage: 42,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 96,
+    name: 'YAKOMYU',
+    damage: 67,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 263,
+    name: 'SHOBIKU',
+    damage: 35,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 111,
+    name: 'YOGAA',
+    damage: 51,
+    isFree: true,
+    created: '2020-05-17',
+  }, {
+    id: 523,
+    name:'SOHYAJA',
+    damage: 52,
+    isFree: true,
+    created: '2020-05-17',
+  },
+];
+
 export const letters: string[] = [
     'ア',
     'イ',
@@ -418,152 +518,153 @@ export const lettersInter = [
   }, {
     j: 'リョ',
     e: 'ryo'
-  }];
+}];
 
-export const  pockemons: Pockemon[] = [
-    {
-      id: 452,
-      name: {
-        jp: 'ミュポ',
-        eng: 'MYUPO'
-      },
-      damage: 39,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 95,
-      name: {
-        jp: 'ヲモ',
-        eng: 'WOMO'
-      },
-      damage: 52,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 450,
-      name: {
-        jp: 'ピャレ',
-        eng: 'PYARE'
-      },
-      damage: 74,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 360,
-      name: {
-        jp: 'ギョギ',
-        eng: 'GYOGI'
-      },
-      damage: 32,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 22,
-      name: {
-        jp: 'アヤ',
-        eng: 'AYA'
-      },
-      damage: 53,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 315,
-      name: {
-        jp: 'ケナジョ',
-        eng: 'KENAJO'
-      },
-      damage: 36,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 79,
-      name: {
-        jp: 'ニャピュユ',
-        eng: 'NYAPYUYU'
-      },
-      damage: 41,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 52,
-      name: {
-        jp: 'ニギヤ',
-        eng: 'NIGIYA'
-      },
-      damage: 50,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 253,
-      name: {
-        jp: 'トゲベ',
-        eng: 'TOGEBE'
-      },
-      damage: 49,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 68,
-      name: {
-        jp: 'ゴニョニ',
-        eng: 'GONYONI'
-      },
-      damage: 55,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 520,
-      name: {
-        jp: 'ウジャ',
-        eng: 'UJA'
-      },
-      damage: 66,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 131,
-      name: {
-        jp: 'セツ',
-        eng: 'SETSU'
-      },
-      damage: 42,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 96,
-      name: {
-        jp: 'ヤコミュ',
-        eng: 'YAKOMYU'
-      },
-      damage: 67,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 263,
-      name: {
-        jp: 'ショビク',
-        eng: 'SHOBIKU'
-      },
-      damage: 35,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 111,
-      name: {
-        jp: 'ヨガア',
-        eng: 'YOGAA'
-      },
-      damage: 51,
-      isFree: true,
-      created: '2020-05-17',
-    }, {
-      id: 523,
-      name: {
-        jp: 'ソヒャジャ',
-        eng: 'SOHYAJA'
-      },
-      damage: 52,
-      isFree: true,
-      created: '2020-05-17',
-    },
-  ];
+
+// export const  pockemons: Pockemon[] = [
+//     {
+//       id: 452,
+//       name: {
+//         jp: 'ミュポ',
+//         eng: 'MYUPO'
+//       },
+//       damage: 39,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 95,
+//       name: {
+//         jp: 'ヲモ',
+//         eng: 'WOMO'
+//       },
+//       damage: 52,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 450,
+//       name: {
+//         jp: 'ピャレ',
+//         eng: 'PYARE'
+//       },
+//       damage: 74,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 360,
+//       name: {
+//         jp: 'ギョギ',
+//         eng: 'GYOGI'
+//       },
+//       damage: 32,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 22,
+//       name: {
+//         jp: 'アヤ',
+//         eng: 'AYA'
+//       },
+//       damage: 53,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 315,
+//       name: {
+//         jp: 'ケナジョ',
+//         eng: 'KENAJO'
+//       },
+//       damage: 36,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 79,
+//       name: {
+//         jp: 'ニャピュユ',
+//         eng: 'NYAPYUYU'
+//       },
+//       damage: 41,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 52,
+//       name: {
+//         jp: 'ニギヤ',
+//         eng: 'NIGIYA'
+//       },
+//       damage: 50,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 253,
+//       name: {
+//         jp: 'トゲベ',
+//         eng: 'TOGEBE'
+//       },
+//       damage: 49,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 68,
+//       name: {
+//         jp: 'ゴニョニ',
+//         eng: 'GONYONI'
+//       },
+//       damage: 55,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 520,
+//       name: {
+//         jp: 'ウジャ',
+//         eng: 'UJA'
+//       },
+//       damage: 66,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 131,
+//       name: {
+//         jp: 'セツ',
+//         eng: 'SETSU'
+//       },
+//       damage: 42,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 96,
+//       name: {
+//         jp: 'ヤコミュ',
+//         eng: 'YAKOMYU'
+//       },
+//       damage: 67,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 263,
+//       name: {
+//         jp: 'ショビク',
+//         eng: 'SHOBIKU'
+//       },
+//       damage: 35,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 111,
+//       name: {
+//         jp: 'ヨガア',
+//         eng: 'YOGAA'
+//       },
+//       damage: 51,
+//       isFree: true,
+//       created: '2020-05-17',
+//     }, {
+//       id: 523,
+//       name: {
+//         jp: 'ソヒャジャ',
+//         eng: 'SOHYAJA'
+//       },
+//       damage: 52,
+//       isFree: true,
+//       created: '2020-05-17',
+//     },
+//   ];

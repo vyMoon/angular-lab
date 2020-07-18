@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+// import { Location } from '@angular/common';
 import { Router } from '@angular/router'
 
 import { PockemonService } from '../services/pockemon/pockemon.service';
-// import { pockemons } from 'src/names';
 import { Pockemon } from 'src/app/Interfases';
 
 @Component({
@@ -19,7 +18,7 @@ export class PockemonDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private location: Location,
+    // private location: Location,
     private pockemonService: PockemonService
   ) { }
 
@@ -28,20 +27,17 @@ export class PockemonDetailsComponent implements OnInit {
     // console.log(this.pockemonInformation)
   }
 
-  getPockemon() {
+  getPockemon(): void {
     const pockemonId = +this.route.snapshot.paramMap.get('id');
     const details: Pockemon = this.pockemonService.getById(pockemonId);
     if (details) {
-      // console.log(details)
       this.pockemonInformation = details
     } else {
-      // console.log(details)
-      // this.location.back();
       this.router.navigate(['/404'])
     }
   }
 
-  onClickCatcn(){
+  onClickCatcn(): void {
     this.pockemonService.pockemonAction(this.pockemonInformation.id)
   }
 

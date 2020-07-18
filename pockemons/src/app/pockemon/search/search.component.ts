@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -13,13 +13,13 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private activRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
   }
 
   onClickSearch() {
-    // console.log(this.name.value);
     this.router.navigate(['/board'], {queryParams: {pockemon: this.name.value}})
   }
 
