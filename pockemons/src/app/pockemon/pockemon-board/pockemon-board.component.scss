@@ -1,0 +1,31 @@
+.board_wrapper {
+    padding-top: 60px;
+}
+
+.pockemon-board-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &-lines {
+        flex-direction: column;
+    }
+}
+
+.pockemon-boeard_search-container {
+    padding-top: 5px;
+}
+
+.search {
+    &_input {
+        padding: 5px;
+        border: 1px solid gray;
+        border-radius: 2px;
+    }
+
+    &_button {
+        padding: 5px;
+        margin-left: 5px;
+        background-color: rgb(250, 227, 98);
+    }
+}

@@ -1,0 +1,33 @@
+<div class="wrapper detail_wrpaaer">
+    <div class="detail_card">
+        <div class="detail_image-container">
+            <img 
+                class="detail_image"
+                src="../../../assets/pokemons/{{pockemonInformation.id}}.png"
+                alt="{{pockemonInformation.name}}"
+            >
+        </div>
+        <div class="detail_imfromation">
+            <h3>{{ pockemonInformation.name }}</h3>
+            <p [ngClass]="{'powerfull': isPowerfull()}">
+                Damage - {{ pockemonInformation.damage }}
+            </p>
+            <p>Created on: {{pockemonInformation.created}}</p>
+            <button 
+                class="detail_edit-information"
+                (click)="onClickEdit()"
+            >
+                Edit
+            </button>
+        </div>
+
+        <button 
+            class="detail_catch-button"
+            (click)="onClickCatcn()"
+        >
+            {{ pockemonInformation.isFree ? 'catch' : 'release'}}
+        </button>
+
+    </div>
+</div>
+

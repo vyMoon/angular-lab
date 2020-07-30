@@ -1,0 +1,51 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100wv;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    z-index: 10;
+}
+
+.header-main {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 204, 194);
+}
+
+.header_logo {
+    width: 35px;
+    margin-right: 8px; 
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_infoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.header_controlscontainer {
+    display: flex;
+    padding-top: 5px;
+    & :nth-last-child(1) {
+        margin-right: 0;
+    }
+}
+
+.header_controlcontainer {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.header_control-main {
+    fill: rgb(255, 255, 255);
+    &:hover {
+        fill: rgb(255, 209, 4);
+    }
+}

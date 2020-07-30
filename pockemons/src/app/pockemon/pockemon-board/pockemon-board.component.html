@@ -1,0 +1,15 @@
+<div class="wrapper board_wrapper">
+    
+    <app-search></app-search>
+
+    <div class="pockemon-board-container"
+        [ngClass]="{'pockemon-board-container-lines': style === 'lines'}"
+    >
+        <app-pockemon-item
+            *ngFor="let pockemon of pockemons"
+            [pockemon]="pockemon"
+            (action)="onAction($event)"
+        ></app-pockemon-item>
+    </div>
+
+</div>

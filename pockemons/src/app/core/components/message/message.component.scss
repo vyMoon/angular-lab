@@ -1,0 +1,13 @@
+.message {
+    position: fixed;
+    top: 150px;
+    right: 3px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: rgb(219, 238, 109);
+}
+
+.message-error {
+    background-color: rgb(241, 139, 121);
+}
